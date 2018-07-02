@@ -1,0 +1,28 @@
+미디어젠 이정민 책임입니다
+
+최신 VR 향지별 DB 배포 드립니다
+HI Branch에 모두 반영 필요합니다
+내수/북미/유럽 update 되었습니다 
+
+향지	DB 명	　	버전	Data size	링크
+내수	vrkr-gr-mrb-64-0.00.21.tar.bz2	mango-vr.tar	LP.KOR.005.00.75.180514/f001	7.20MB	http://10.178.85.23/binary/hkmc-avn/gr-mrb-64/official/vrkr/vrkr-gr-mrb-64-0.00.21.tar.bz2
+
+		mango-vr_fixed.tar	FLP.KOR.005.00.66.180514/f001	101MB	
+북미	vrus-gr-mrb-64-0.00.21.tar.bz2	mango-vr.tar	LP.NA.005.00.75.180514/f002	113MB	http://10.178.85.23/binary/hkmc-avn/gr-mrb-64/official/vrus/vrus-gr-mrb-64-0.00.21.tar.bz2
+
+		mango-vr_fixed.tar	FLP.NA.005.00.67.180514/f001	1614.00MB	
+유럽	vreu-gr-mrb-64-0.00.23.tar.bz2	mango-vr.tar	LP.EU.005.00.75.180514/f001	92.8MB	http://10.178.85.23/binary/hkmc-avn/gr-mrb-64/official/vreu/vreu-gr-mrb-64-0.00.23.tar.bz2
+
+		mango-vr_fixed.tar	FLP.EU.005.00.66.180514/f001	2013.34MB	
+중동	vrme-gr-mrb-64-0.00.02.tar.bz2	mango-vr.tar	LP.ME.005.00.17.180404	747MB	http://10.178.85.23/binary/hkmc-avn/gr-mrb-64/official/vrme/vrme-gr-mrb-64-0.00.02.tar.bz2
+
+		mango-vr_fixed.tar	FLP.ME.005.00.17.171023	699.13MB	
+중국	vrcn-gr-mrb-64-0.00.01.tar.bz2	mango-vr.tar	LP.CHN.005.00.15.171023	48.0MB	http://10.178.85.23/binary/hkmc-avn/gr-mrb-64/official/vrcn/vrcn-gr-mrb-64-0.00.01.tar.bz2
+
+		mango-vr_fixed.tar	FLP.CHN.005.00.15.171023	374.74MB	
+호주	vrau-gr-mrb-64-0.00.01.tar.bz2	mango-vr.tar	LP.ENA.005.00.03.171023	48.2MB	http://10.178.85.23/binary/hkmc-avn/gr-mrb-64/official/vrau/vrau-gr-mrb-64-0.00.01.tar.bz2
+
+		mango-vr_fixed.tar	FLP.ENA.005.00.03.171023	683.63MB	
+
+VR SW
+VH.ALL.005.00.48.180518

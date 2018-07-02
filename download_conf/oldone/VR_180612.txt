@@ -1,0 +1,27 @@
+미디어젠 이정민 책임입니다.
+최신 VR 향지별 DB 배포 합니다.
+Master, @pgen5_NAMG5_180523 Branch에 모두 반영 필요합니다.
+
+북미/유럽 업데이트 되었습니다.
+향지	DB 명	버전	Data size	링크
+내수	vrkr-gr-mrb-64-0.00.22.tar.bz2	LP.KOR.005.00.76.180604/f001	7.60MB	http://10.178.85.23/binary/hkmc-avn/gr-mrb-64/official/vrkr/vrkr-gr-mrb-64-0.00.22.tar.bz2
+
+		FLP.KOR.005.00.66.180514/f001	101MB	
+북미	vrus-gr-mrb-64-0.00.26.tar.bz2	LP.NA.005.00.83.180612/f003	116MB	http://10.178.85.23/binary/hkmc-avn/gr-mrb-64/official/vrus/vrus-gr-mrb-64-0.00.26.tar.bz2
+
+		FLP.NA.005.00.69.180521/f003	1617.60MB	
+유럽	vreu-gr-mrb-64-0.00.25.tar.bz2	LP.EU.005.00.77.1806011/f001	93.0MB	http://10.178.85.23/binary/hkmc-avn/gr-mrb-64/official/vreu/vreu-gr-mrb-64-0.00.25.tar.bz2
+
+		FLP.EU.005.00.66.180514/f001	2013.35MB	
+중동	vrme-gr-mrb-64-0.00.03.tar.bz2	LP.ME.005.00.18.180604	51.2MB	http://10.178.85.23/binary/hkmc-avn/gr-mrb-64/official/vrme/vrme-gr-mrb-64-0.00.03.tar.bz2
+
+		FLP.ME.005.00.18.180604	699MB	
+중국	vrcn-gr-mrb-64-0.00.02.tar.bz2	LP.CHN.005.00.16.180604	50.5MB	http://10.178.85.23/binary/hkmc-avn/gr-mrb-64/official/vrcn/vrcn-gr-mrb-64-0.00.02.tar.bz2
+
+		FLP.CHN.005.00.16.180604	374MB	
+호주	vrau-gr-mrb-64-0.00.02.tar.bz2	LP.ENA.005.00.04.180604	50.6MB	http://10.178.85.23/binary/hkmc-avn/gr-mrb-64/official/vrau/vrau-gr-mrb-64-0.00.02.tar.bz2
+
+		FLP.ENA.005.00.04.180604	683MB	
+
+VR SW
+VH.ALL.005.00.55.180611

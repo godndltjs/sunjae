@@ -1,0 +1,23 @@
+내수/북미/유럽 update 되었습니다 
+　	버전	Data size	링크
+mango-vr.tar	LP.KOR.005.00.74.180510/f001	7.20MB	http://10.178.85.23/binary/hkmc-avn/gr-mrb-64/official/vrkr/vrkr-gr-mrb-64-0.00.20.tar.bz2
+
+mango-vr_fixed.tar	FLP.KOR.005.00.65.180510/f001	101MB	
+mango-vr.tar	LP.NA.005.00.74.180510/f002	113MB	http://10.178.85.23/binary/hkmc-avn/gr-mrb-64/official/vrus/vrus-gr-mrb-64-0.00.20.tar.bz2
+
+mango-vr_fixed.tar	FLP.NA.005.00.67.180510/f001	1614.00MB	
+mango-vr.tar	LP.EU.005.00.74.180510/f001	92.8MB	http://10.178.85.23/binary/hkmc-avn/gr-mrb-64/official/vreu/vreu-gr-mrb-64-0.00.22.tar.bz2
+
+mango-vr_fixed.tar	FLP.EU.005.00.66.180510/f001	2013.34MB	
+mango-vr.tar	LP.ME.005.00.17.180404	747MB	http://10.178.85.23/binary/hkmc-avn/gr-mrb-64/official/vrme/vrme-gr-mrb-64-0.00.02.tar.bz2
+
+mango-vr_fixed.tar	FLP.ME.005.00.17.171023	699.13MB	
+mango-vr.tar	LP.CHN.005.00.15.171023	48.0MB	http://10.178.85.23/binary/hkmc-avn/gr-mrb-64/official/vrcn/vrcn-gr-mrb-64-0.00.01.tar.bz2
+
+mango-vr_fixed.tar	FLP.CHN.005.00.15.171023	374.74MB	
+mango-vr.tar	LP.ENA.005.00.03.171023	48.2MB	http://10.178.85.23/binary/hkmc-avn/gr-mrb-64/official/vrau/vrau-gr-mrb-64-0.00.01.tar.bz2
+
+mango-vr_fixed.tar	FLP.ENA.005.00.03.171023	683.63MB	
+
+VR SW
+VH.ALL.005.00.45.180510

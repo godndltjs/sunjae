@@ -1,0 +1,24 @@
+사전품확이슈 수정한 Ver 배포합니다.
+최신 VR 향지별 DB 데이터 링크  송부 드립니다. 유럽만 업데이트되었습니다
+EU Branch에 반영이 필요합니다.
+VR SW
+VH : VH.ALL.005.00.15.180224
+SDS : SDS.ALL.005.00.01.180209_HYBRID
+향지	DB 명	버전	Data size	링크
+내수	vrkr-gr-mrb-64-0.00.07.tar.bz2	LP.KOR.005.00.63.180219/f001
+FLP.KOR.005.00.63.180219/f001	84.46 MB	http://10.178.85.23/binary/hkmc-avn/gr-mrb-64/official/vrkr/vrkr-gr-mrb-64-0.00.07.tar.bz2
+
+북미	vrus-gr-mrb-64-0.00.07.tar.bz2	LP.NA.005.00.60.180220/f001
+FLP.NA.005.00.60.180220/f001	1511.53 MB	http://10.178.85.23/binary/hkmc-avn/gr-mrb-64/official/vrus/vrus-gr-mrb-64-0.00.07.tar.bz2
+
+유럽	vreu-gr-mrb-64-0.00.09.tar.bz2	LP.EU.005.00.63.180224/f001
+FLP.EU.005.00.63.180224/f001	1823.26 MB	http://10.178.85.23/binary/hkmc-avn/gr-mrb-64/official/vreu/vreu-gr-mrb-64-0.00.09.tar.bz2
+
+중동	vrme-gr-mrb-64-0.00.01.tar.bz2	LP.ME.005.00.17.171023
+FLP.ME.005.00.17.171023	639.15 MB	http://10.178.85.23/binary/hkmc-avn/gr-mrb-64/official/vrme/vrme-gr-mrb-64-0.00.01.tar.bz2
+
+중국	vrcn-gr-mrb-64-0.00.01.tar.bz2	LP.CHN.005.00.15.171023
+FLP.CHN.005.00.15.171023	346.85 MB	http://10.178.85.23/binary/hkmc-avn/gr-mrb-64/official/vrcn/vrcn-gr-mrb-64-0.00.01.tar.bz2
+
+호주	vrau-gr-mrb-64-0.00.01.tar.bz2	LP.ENA.005.00.03.171023
+FLP.ENA.005.00.03.171023	634.79 MB	http://10.178.85.23/binary/hkmc-avn/gr-mrb-64/official/vrau/vrau-gr-mrb-64-0.00.01.tar.bz2
