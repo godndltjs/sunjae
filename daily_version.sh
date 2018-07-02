@@ -28,8 +28,8 @@ set_enviroment_value () {
 
     case $PROJECT_AND_BRANCH in
         P5M)
-            SSH_AUTH="jusung87@10.185.7.32"
-            BUILD_GIT_DIR="/data001/jusung87/build-mango/"
+            SSH_AUTH="godndltjs.lee@10.185.7.32"
+            BUILD_GIT_DIR="/data001/godndltjs.lee/build-mango/"
             META_GIT_DIR="${BUILD_GIT_DIR}/metalayers/meta-mango"
             VERSION_TXT="${META_GIT_DIR}/recipes-core/base-files/base-files/version.txt"
             BRANCH="master"
