@@ -1,0 +1,64 @@
+
+    <!DOCTYPE html>
+    <html>    
+    <head>
+      
+    </head>
+    
+    <body>
+
+        <script type="text/javascript">
+          bvttt();
+        
+        function bvttt()// BVT
+        {
+          var bvttcomfirm = prompt('BVT SUCCESS?','YES')
+          if(bvttcomfirm == "YES")
+          {
+              alert('BVT sucess')
+              md5ss();
+             
+          }
+          else{
+            alert('BVT failure')
+            location.href = "FomatMail.HTML";
+          }
+        }
+        function md5ss()//MD5SUM CHECK(파일업로드 시킬것)
+        {
+            var f1 = prompt('first file')
+            var f2 = prompt('second file')
+
+          if(f1 == f2)
+          {
+              alert('md5sum sucess');
+              Frss();
+          }
+          else
+          {
+              alert('md5sum fail');
+              location.href = "FomatMail.HTML"
+          }
+        }
+        function Swcc()// SW CHECK
+        {
+            
+        }
+        function Nacc()//NAVI CHECK
+        {
+
+        }
+        function RNcc()//Request No CHECK
+        {
+            
+        }
+        function Frss()//Final Result Send
+        {
+          location.href = "Final.html"
+        }
+        </script>
+        
+    <br>
+     
+    </body>
+    </html>
