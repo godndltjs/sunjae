@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 commit a94d766333d2c463b275cd637485f3ce2280ce15
 Author: Your Name <you@example.com>
 Date:   Tue Jul 3 11:12:50 2018 +0900
@@ -263,3 +264,14 @@ Author: Your Name <you@example.com>
 Date:   Mon Jul 2 09:59:09 2018 +0900
 
     asd1
+=======
+v1 modified  
+v1  
+maybe v1  
+v1  
+v1  
+v1  
+v1  
+abc1  
+asd1  
+>>>>>>> 14b8b17... enter
