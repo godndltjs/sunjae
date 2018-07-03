@@ -5,13 +5,13 @@
 
 step0_select_project_branch () {
     case $PROJECT_AND_BRANCH in
-        P5M|P5GEN)
+        P5M|P5GEN|P5K2|P5K3|P5P1)
             echo -e "'\033[33m$PROJECT_AND_BRANCH\033[m' selected. \n"
         ;;
 
         *)
             PS3="Select PROJECT_AND_BRANCH (Input the number): "
-            select PROJECT_AND_BRANCH in P5M P5GEN
+            select PROJECT_AND_BRANCH in P5M P5GEN P5K2 P5K3 P5P1
             do
                 echo -e "'\033[33m$PROJECT_AND_BRANCH\033[m' selected. \n"
                 break;
@@ -37,7 +37,37 @@ set_enviroment_value () {
             VERSION=`date +${VERSION_PREFIX}.%y%W.0%w`
             BUILD_TYPE="[DAILY VERSION BUILD REQ]"
         ;;
-
+        
+        P5K2)
+            SSH_AUTH="godndltjs.lee@10.185.7.32"
+            BUILD_GIT_DIR="/data001/godndltjs.lee/build-mango/"
+            META_GIT_DIR="${BUILD_GIT_DIR}/metalayers/meta-mango"
+            VERSION_TXT="${META_GIT_DIR}/recipes-core/base-files/base-files/version.txt"
+            BRANCH="@pgen5.RUP.KOR.2018.2nd"
+            VERSION_PREFIX="RJ.KOR.PV" ; # + SURFFIX such as ".1810.03"
+            VERSION=`date +${VERSION_PREFIX}.001.002.%y%m%d`
+            BUILD_TYPE="[EVENT VERSION BUILD REQ]"
+        ;;
+        P5K3)
+            SSH_AUTH="godndltjs.lee@10.185.7.32"
+            BUILD_GIT_DIR="/data001/godndltjs.lee/build-mango/"
+            META_GIT_DIR="${BUILD_GIT_DIR}/metalayers/meta-mango"
+            VERSION_TXT="${META_GIT_DIR}/recipes-core/base-files/base-files/version.txt"
+            BRANCH="@pgen5_RUP_KOR_180523"
+            VERSION_PREFIX="RJ.KOR.PV" ; # + SURFFIX such as ".1810.03"
+            VERSION=`date +${VERSION_PREFIX}.001.003.%y%m%d`
+            BUILD_TYPE="[EVENT VERSION BUILD REQ]"
+        ;;
+        P5P1)
+            SSH_AUTH="godndltjs.lee@10.185.7.32"
+            BUILD_GIT_DIR="/data001/godndltjs.lee/build-mango/"
+            META_GIT_DIR="${BUILD_GIT_DIR}/metalayers/meta-mango"
+            VERSION_TXT="${META_GIT_DIR}/recipes-core/base-files/base-files/version.txt"
+            BRANCH="@pgen5.HIFL.P1.180621"
+            VERSION_PREFIX="RJ.KOR.PV" ; # + SURFFIX such as ".1810.03"
+            VERSION=`date +${VERSION_PREFIX}.04.1827.P1C` # 년도주차 와 P1X바꿀것
+            BUILD_TYPE="[EVENT VERSION BUILD REQ]"
+        ;;
         P5GEN)
             SSH_AUTH="sunghoon.baek@10.158.4.110"
             BUILD_GIT_DIR="/home/sunghoon.baek/build-mango"
@@ -78,14 +108,14 @@ make_baseline () {
     echo ${VERSION} > ${VERSION_TXT}
     git diff ; # 확인
     git add ${VERSION_TXT}
-    git commit  -m "${VERSION}" -m "${BUILD_TYPE}" && git push origin HEAD:refs/for/${BRANCH}
+    git commit  -m "[Pgen5][CM] ${VERSION}" -m "${BUILD_TYPE}" && git push origin HEAD:refs/for/${BRANCH}
 }
 
 make_tag (){
     cd ${META_GIT_DIR} 
     git checkout ${BRANCH}
     initialize_git_dir
-    git tag -a ${VERSION} -m "${VERSION}" && git push origin ${VERSION}
+    git tag -a  ${VERSION} -m "${VERSION}" && git push origin ${VERSION}
 }
 
 api_call_jenkins_official_build (){
