@@ -65,7 +65,7 @@ set_enviroment_value () {
             VERSION_TXT="${META_GIT_DIR}/recipes-core/base-files/base-files/version.txt"
             BRANCH="@pgen5.HIFL.P1.180621"
             VERSION_PREFIX="RJ.KOR.PV" ; # + SURFFIX such as ".1810.03"
-            VERSION=`date +${VERSION_PREFIX}.04.1827.P1C` # 년도주차 와 P1X바꿀것
+            VERSION=`date +${VERSION_PREFIX}.04.1827.03.P1C` # 년도주차 와 P1X바꿀것
             BUILD_TYPE="[EVENT VERSION BUILD REQ]"
         ;;
         P5GEN)
@@ -108,7 +108,7 @@ make_baseline () {
     echo ${VERSION} > ${VERSION_TXT}
     git diff ; # 확인
     git add ${VERSION_TXT}
-    git commit  -m "[Pgen5][CM] ${VERSION}" -m "${BUILD_TYPE}" && git push origin HEAD:refs/for/${BRANCH}
+    git commit  -m "${VERSION}" -m "[CM]${BUILD_TYPE}" && git push origin HEAD:refs/for/${BRANCH}
 }
 
 make_tag (){
