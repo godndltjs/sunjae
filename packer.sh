@@ -1,4 +1,4 @@
-CONF_DIR="C:/Users/user/Downloads/SCRIPT"
+CONF_DIR="C:/Users/user/Downloads/SCRIPT/download_conf"
 PACK_DIR="C:/Users/user/Downloads/build2"
 NAVIS_DIR="x:"
 CAL_DIR="C:/Users/user/Downloads/SCRIPT"
