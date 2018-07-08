@@ -5,13 +5,13 @@
 
 step0_select_project_branch () {
     case $PROJECT_AND_BRANCH in
-        P5M|P5GEN|P5K2|P5K3|P5P1)
+        P5M|P5GEN|P5K2|P5K3|P5P1|P5USG5)
             echo -e "'\033[33m$PROJECT_AND_BRANCH\033[m' selected. \n"
         ;;
 
         *)
             PS3="Select PROJECT_AND_BRANCH (Input the number): "
-            select PROJECT_AND_BRANCH in P5M P5GEN P5K2 P5K3 P5P1
+            select PROJECT_AND_BRANCH in P5M P5GEN P5K2 P5K3 P5P1 P5USG5
             do
                 echo -e "'\033[33m$PROJECT_AND_BRANCH\033[m' selected. \n"
                 break;
@@ -37,14 +37,23 @@ set_enviroment_value () {
             VERSION=`date +${VERSION_PREFIX}.%y%W.0%w`
             BUILD_TYPE="[DAILY VERSION BUILD REQ]"
         ;;
-        
+        P5USG5)
+            SSH_AUTH="godndltjs.lee@10.185.7.32"
+            BUILD_GIT_DIR="/data001/godndltjs.lee/build-mango/"
+            META_GIT_DIR="${BUILD_GIT_DIR}/metalayers/meta-mango"
+            VERSION_TXT="${META_GIT_DIR}/recipes-core/base-files/base-files/version.txt"
+            BRANCH="@pgen5_NAMG5_180523"
+            VERSION_PREFIX="RJ.USA.P5" ; # + SURFIX such as ".1810.03"
+            VERSION=`date +${VERSION_PREFIX}.001.001.%y%m%d`
+            BUILD_TYPE="[DAILY VERSION BUILD REQ]"
+       
         P5K2)
             SSH_AUTH="godndltjs.lee@10.185.7.32"
             BUILD_GIT_DIR="/data001/godndltjs.lee/build-mango/"
             META_GIT_DIR="${BUILD_GIT_DIR}/metalayers/meta-mango"
             VERSION_TXT="${META_GIT_DIR}/recipes-core/base-files/base-files/version.txt"
             BRANCH="@pgen5.RUP.KOR.2018.2nd"
-            VERSION_PREFIX="RJ.KOR.PV" ; # + SURFFIX such as ".1810.03"
+            VERSION_PREFIX="RJ.KOR.P5" ; # + SURFFIX such as ".1810.03"
             VERSION=`date +${VERSION_PREFIX}.001.002.%y%m%d`
             BUILD_TYPE="[EVENT VERSION BUILD REQ]"
         ;;
@@ -54,7 +63,7 @@ set_enviroment_value () {
             META_GIT_DIR="${BUILD_GIT_DIR}/metalayers/meta-mango"
             VERSION_TXT="${META_GIT_DIR}/recipes-core/base-files/base-files/version.txt"
             BRANCH="@pgen5_RUP_KOR_180523"
-            VERSION_PREFIX="RJ.KOR.PV" ; # + SURFFIX such as ".1810.03"
+            VERSION_PREFIX="RJ.KOR.P5" ; # + SURFFIX such as ".1810.03"
             VERSION=`date +${VERSION_PREFIX}.001.003.%y%m%d`
             BUILD_TYPE="[EVENT VERSION BUILD REQ]"
         ;;
