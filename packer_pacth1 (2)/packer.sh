@@ -1,18 +1,18 @@
-CONF_DIR="C:/Users/user/Downloads/SCRIPT/download_conf"
-PACK_DIR="C:/Users/user/Downloads/build2"
+CONF_DIR="C:/Users/VT/Desktop/CM/SCRIPT/download_conf"
+PACK_DIR="C:/Users/VT/Downloads/build2"
 NAVIS_DIR="x:"
-CAL_DIR="C:/Users/user/Downloads/SCRIPT"
-WHO_AM_I="godndltjs.lee"
+CAL_DIR="C:/Users/VT/Desktop/CM/SCRIPT"
+WHO_AM_I="sunghoon.baek"
 
 step0_select_country () {
     case $COUNTRY in
-        KOR|NAM|EUR|AUS|CHN|MDE|RUS|GEN|TUR)
+        KOR|USA|EUR|AUS|CHN|MDE|RUS|GEN|TUR)
             echo -e "'\033[33m$COUNTRY\033[m' selected. \n"
         ;;
 
         *)
             PS3="Select Country ( Input the number ): "
-            select COUNTRY in KOR NAM EUR AUS CHN MDE RUS GEN TUR
+            select COUNTRY in KOR USA EUR AUS CHN MDE RUS GEN TUR
             do
                 echo -e "'\033[33m$COUNTRY\033[m' selected. \n"
                 break;
@@ -28,7 +28,7 @@ print_status () {
     BUILD_TIMESTAMP=`date +%y%m%d_%H:%M:%S`
     echo -e "\n \033[33m[Current Status]\t [TIME]\033[36m\n ${1}\t ${BUILD_TIMESTAMP}\033[m\n"
     echo -e "\n [Current Status]\t\t   [TIME]\n ${1}\t ${BUILD_TIMESTAMP}" >> ${PACK_DIR}/package_history.txt
-    # call_google_calendar 3 # need three for status
+    call_google_calendar 3 # need three for status
 }
 
 call_google_calendar () {
@@ -39,7 +39,7 @@ call_google_calendar () {
 
 requisite_navi_dir_check () {
     case $COUNTRY in
-        KOR|MDE|EUR|AUS|NAM|RUS|CHN|TUR)
+        KOR|MDE|EUR|AUS|USA|RUS|CHN|TUR)
             NAVI_FILE="navi_"
             get_navi_dir  
         ;;
@@ -59,7 +59,7 @@ get_navi_dir () {
             NAVI_COUNTRY="MES"
         ;;
 
-        NAM)
+        USA)
             NAVI_COUNTRY="NAM"
         ;;
 
@@ -73,7 +73,7 @@ get_navi_dir () {
         exit
     fi
     PS3="Select Navi Dirtory : "
-    select NAVI_DIR in `find ${NAVIS_DIR}/${NAVI_COUNTRY}/*18* -name "*${NAVI_FILE}*" | tail -10 `
+    select NAVI_DIR in `find ${NAVIS_DIR}/${NAVI_COUNTRY}/*18* -name "*${NAVI_FILE}*" | tail -10 | tr -d '\.'`
     do
         echo -e "'\033[33m${NAVI_DIR}\033[m' selected. \n"
         break;
@@ -92,7 +92,7 @@ change_download_conf() {
         MDE|GEN)
             LATEST_VR_VER=`cat ${CONF_DIR}/VR*.txt | grep ME | grep http:// | awk '{print $5}'`
         ;;
-        NAM)
+        USA)
             LATEST_VR_VER=`cat ${CONF_DIR}/VR*.txt | grep NA | grep http:// | awk '{print $5}' | head -1`
         ;;
         AUS)
@@ -125,7 +125,7 @@ download_vr () {
 download_navi () {
     if [ ! -d ${PACK_DIR}/${COUNTRY} ]; then mkdir -p ${PACK_DIR}/${COUNTRY}; fi 
     case $COUNTRY in
-        KOR|MDE|EUR|AUS|NAM|RUS|CHN|TUR)
+        KOR|MDE|EUR|AUS|USA|RUS|CHN|TUR)
             cp -av ${NAVI_LINK} ${PACK_DIR}/${COUNTRY}
         ;;
 
@@ -170,14 +170,16 @@ split_compress () {
 }
 
 check_conf_file () {
+    . ${CONF_DIR}/SYSTEM.conf
+    . ${CONF_DIR}/${COUNTRY}.conf
     echo -e " \033[33mSW_VERSION : $VERSION\033[m"
     echo -e "\n [ PACKAGE VERSION CHECK ]" >> ${PACK_DIR}/package_history.txt
     echo -e " SW_VERSION : $VERSION" >> ${PACK_DIR}/package_history.txt
     echo -e " NAVI_DIR : $NAVI_LINK" | tee -a ${PACK_DIR}/package_history.txt
     echo -e " VR_LINK  : $VR_LINK" | tee -a ${PACK_DIR}/package_history.txt
-    echo -e " SYS_IMAGE : $SYSTEM_IMAGE_LINK" | tee -a ${PACK_DIR}/package_history.txt
+    echo -e " SYS_IMAGE_NUM : $SYSTEM_IMAGE_LINK" | tee -a ${PACK_DIR}/package_history.txt
     echo -e " Packaged by $WHO_AM_I" | tee -a ${PACK_DIR}/package_history.txt
-    # call_google_calendar 6 # need five line for version info
+    call_google_calendar 6 # need five line for version info
 }
 
 call_jenkins_api_gang_image_job (){
@@ -203,7 +205,7 @@ call_jenkins_api_gang_image_job (){
 
     # CONVERTE COUNTRY NAME FOR GANG IAMGE SCRIPT 
     case $COUNTRY in
-        KOR|GEN)
+        KOR|GEN|USA)
             GANG_COUNTRIES=$COUNTRY
         ;;
 
@@ -215,9 +217,6 @@ call_jenkins_api_gang_image_job (){
             GANG_COUNTRIES=`echo $COUNTRY | cut -c 1,3`
         ;;
         
-        NAM)
-            GANG_COUNTRIES="USA"
-        ;;
         CHN)
             GANG_COUNTRIES="CHINA"
         ;;

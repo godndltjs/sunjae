@@ -43,7 +43,7 @@ set_enviroment_value () {
             META_GIT_DIR="${BUILD_GIT_DIR}/metalayers/meta-mango"
             VERSION_TXT="${META_GIT_DIR}/recipes-core/base-files/base-files/version.txt"
             BRANCH="@pgen5_NAMG5_180523"
-            VERSION_PREFIX="RJ.USA.P5" ; # + SURFIX such as ".1810.03"
+            VERSION_PREFIX="RJ.NAM.P5" ; # + SURFIX such as ".1810.03"
             VERSION=`date +${VERSION_PREFIX}.001.001.%y%m%d`
             BUILD_TYPE="[DAILY VERSION BUILD REQ]"
        
