@@ -117,7 +117,7 @@ def create_event(VERS, COMMENT):
     }
 
     event = service.events().insert(calendarId='mn01riqketee7iojqjmnn4kl78@group.calendar.google.com', body=event).execute()
-    print ('Event created: %s' % (event.get('htmlLink')))
+    # print ('Event created: %s' % (event.get('htmlLink')))
 
 def main():
     search_event(sys.argv[1], sys.argv[2])
